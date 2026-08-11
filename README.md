@@ -59,11 +59,11 @@ Code that ages well.
 ```text
 Languages      Rust · Python · TypeScript · Shell · SQL
 Backend        FastAPI · Node.js · .NET · Next.js · Astro
-Data           PostgreSQL · SQLite · MySQL · MongoDB
+Data           PostgreSQL · pgvector · SQLite · MySQL · MongoDB
 Systems        Arch Linux · Hyprland · Debian · systemd · macOS
 Infra          Apache · Cloudflare · Docker · GitHub Actions · Azure
 Self-hosted    Matrix Synapse · Pi-hole · certbot (dns-cloudflare)
-Security       PCI-DSS · ISO 27001 · OWASP · SonarQube · Bitwarden
+Security       PCI-DSS · ISO 27001 · LFPDPPP · OWASP · nmap · impacket
 Environment    tmux · zsh · Obsidian · rsync
 Camera         Canon EOS R6 Mark II · RF 24-70
 ```
@@ -72,27 +72,56 @@ Camera         Canon EOS R6 Mark II · RF 24-70
 
 ## `$ ls projects/`
 
+### Terminal tools · Rust
+
 | Project | What it is |
 |---|---|
-| **[termdoc](https://github.com/marturojt/termdoc)** | Universal document viewer for the terminal. Rust, multi-crate workspace, MIT/Apache-2.0. |
-| **[dapctl](https://github.com/marturojt/dapctl)** | DAP-aware music library sync and audit. Rust, GPLv3, `cargo install dapctl`. |
-| **[homebrew-tap](https://github.com/marturojt/homebrew-tap)** | `brew tap marturojt/tap` — distribution for my own tools. |
-| **[snr-red](https://github.com/marturojt/snr-red)** | URL shortener and QR manager. Next.js + Node.js, running at [snr.red](https://snr.red). |
-| **[masada](https://github.com/marturojt/masada)** | Static site in Astro + MDX, no JS frameworks. Self-hosted at [masada324.org](https://masada324.org). |
+| **[termdoc](https://github.com/marturojt/termdoc)** | Universal document viewer for the terminal. Multi-crate workspace, dual MIT/Apache-2.0, on crates.io. |
+| **[dapctl](https://github.com/marturojt/dapctl)** | DAP-aware music library sync and audit. GPLv3, v1.0.1, `cargo install dapctl`. |
+| **[homebrew-tap](https://github.com/marturojt/homebrew-tap)** | `brew tap marturojt/tap` — distribution channel for my own tools. |
+
+### Security engineering
+
+| Project | What it is |
+|---|---|
+| **[Harden.Tools](https://github.com/marturojt/harden-tools-website)** | Security engineering for real infrastructure. Bilingual Astro site. |
+| **Fortaleza** · *private* | Micro-SaaS that scans domains passively and non-destructively — 7 parallel scanners, findings mapped to LFPDPPP, PCI-DSS, ISO 27001 and OWASP Top 10, reported in business language. |
+| **fortaleza-pentest** · *private* | Internal LAN penetration testing TUI. 12 assessment modules over nmap, hydra and impacket; every finding mapped to PCI-DSS v4.0 and ISO 27001:2022 controls, with Markdown, HTML and PDF reports. |
+
+### Platforms & APIs
+
+| Project | What it is |
+|---|---|
 | **[id-manager-api](https://github.com/marturojt/id-manager-api)** | ID document extraction, face matching and proof of life. Python. |
-| **[poc-contact-center](https://github.com/marturojt/poc-contact-center)** | AI agents for contact centre: WebRTC voice and SSE text, three verticals. |
-| **ART** | Real-time approval platform for financial products. Proprietary, in production since 2014. |
+| **DocAI** · *private* | Electronic dossier platform: upload, OCR, structured extraction with AI and natural-language queries over case files. Configurable by industry preset. FastAPI + Postgres/pgvector + S3. |
+| **[snr-red](https://github.com/marturojt/snr-red)** | URL shortener and QR manager with per-link analytics — geolocation, device, browser, time series. Next.js + Node.js, running at [snr.red](https://snr.red). |
+| **[croni.co](https://github.com/marturojt/croni.co)** | The Python URL shortener that came before snr-red. |
+| **[poc-contact-center](https://github.com/marturojt/poc-contact-center)** | AI agents for contact centre: five use cases, three verticals, WebRTC voice and SSE text, live metrics panel. |
+
+### Sites
+
+| Project | What it is |
+|---|---|
+| **[masada](https://github.com/marturojt/masada)** | Astro + MDX, static output, zero JS frameworks. Self-hosted at [masada324.org](https://masada324.org). |
+| **[insidious-space-landing](https://github.com/marturojt/insidious-space-landing)** | Minimalist cyberpunk landing for a free-software systems integrator. |
+
+### Hardware & systems
+
+| Project | What it is |
+|---|---|
+| **[zmk-config](https://github.com/marturojt/zmk-config)** | Keyboard firmware config. ZMK, plus QMK and PCB work on the side. |
+| **[datacenter-monitor](https://github.com/marturojt/datacenter-monitor)** | Temperature and humidity monitoring for a datacenter, on a Raspberry Pi with a DHT11. |
+| **[SFTPFolderAnalyzer](https://github.com/marturojt/SFTPFolderAnalyzer)** | Detects new files on an SFTP server and notifies over Telegram. |
+| **myConfigs** · *private* | Migrates terminal and prompt config between Macs, AES-256-CBC encrypted with PBKDF2, using only the `openssl` already present on macOS. |
+
+### Experiments
+
+| Project | What it is |
+|---|---|
+| **[WaifuBOT](https://github.com/marturojt/WaifuBOT)** | AI companion inside a Telegram bot. Python. |
+| **ART** · *proprietary* | Real-time approval platform for financial products. In production since 2014. |
 
 Most of what's here started as something I needed, and only later became software worth reusing.
-
----
-
-## `$ git log --stat`
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=marturojt&theme=chartreuse-dark&show_icons=true&hide_border=true&count_private=true" height="170">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=marturojt&layout=compact&theme=chartreuse-dark&hide_border=true&langs_count=8" height="170">
-</p>
 
 ---
 
